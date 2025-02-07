@@ -164,13 +164,22 @@ Through experiments, we demonstrate that our method achieves state-of-the-art pe
 <!-- Model Architecture -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container is-max-desktop", style="margin-top:30px;">
-      <div class="section-title has-text-centered">
-        <h2 class="title is-3", style="margin-top:30px;">Overall Architecture</h2>
-      </div>
-     
-      <img src="static/images/ITH_model.png" alt="MY ALT TEXT"/>
-
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-sixths">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <img src="static/images/ITH_model.png" alt="Model Architecture"/>
+          <p style="font-size: 18px; margin-top: 30px;">
+            Our model features a hierarchical architecture comprising three main components: the Imagination Module, which generates auditory representations; the Language Encoder, which processes textual inputs; and the Fusion Module, which integrates auditory and linguistic information.
+          </p>
+        </div>
+        <div class="content has-text-justified">
+          <img src="static/images/ITH_rejection.png" alt="Rejection System"/>
+          <p style="font-size: 18px; margin-top: 30px;">
+            An iterative refinement process powered by a CLAP-based rejection system ensures high-quality auditory knowledge generation. This architecture enables retrieval-free auditory augmentation, overcoming the limitations of retrieval-based approaches.
+          </p>
+        </div>
+        
       </div>
     </div>
   </div>
