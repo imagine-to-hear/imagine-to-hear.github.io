@@ -175,52 +175,228 @@ Assistant for Language Models</h1>
   </div>
 </div>
 
+<!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
-    <div class="text-center">
-      <h2 class="title is-3">Abstract</h2>
-      <p class="fs-5 text-justify">
-        The advancement of pretrained language models has significantly improved the state of the art in various language-related tasks.
-        However, since the models have been trained on text-only corpora, they struggle with tasks requiring auditory commonsense knowledge.
-        Previous work addresses this problem by augmenting the language model to retrieve knowledge from an external database containing auditory data.
-        This approach has many limitations, such as the potential lack of relevant audio in databases and the high costs associated with constructing and querying the databases.
-        To address these issues, we propose Imagine to Hear, a novel approach that dynamically generates auditory knowledge using generative models.
-        Our framework employs a hierarchical architecture that effectively integrates auditory knowledge, incorporating a CLAP-based rejection system for quality control.
-        Through experiments, we demonstrate that our method achieves state-of-the-art performance on AuditoryBench without relying on external databases, and improves performance on GLUE and CommonsenseQA benchmark, highlighting the effectiveness of our generation-based approach.
-      </p>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p style="font-size:18px;">
+            The advancement of pretrained language models has significantly improved the state of the art in various language-related tasks.
+However, since the models have been trained on text-only corpora, they struggle with tasks requiring auditory commonsense knowledge.
+Previous work addresses this problem by augmenting the language model to retrieve knowledge from an external database containing auditory data.
+This approach has many limitations, such as the potential lack of relevant audio in databases and the high costs associated with constructing and querying the databases.
+To address these issues, we propose Imagine to Hear, a novel approach that dynamically generates auditory knowledge using generative models.
+Our framework employs a hierarchical architecture that effectively integrates auditory knowledge, incorporating a CLAP-based rejection system for quality control.
+Through experiments, we demonstrate that our method achieves state-of-the-art performance on AuditoryBench without relying on external databases, and improves performance on GLUE and CommonsenseQA benchmark, highlighting the effectiveness of our generation-based approach.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Model Architecture -->
+<!-- Method Section -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop" style="margin-top: 30px;">
+      <div class="section-title has-text-centered">
+        <h2 class="title is-3">Method</h2>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-  <h2 class="text-center">Model Architecture</h2>
-  <div class="text-center mt-4">
-    <img src="static/images/ITH_model.png" alt="Model Architecture" class="img-fluid">
+<!-- Model Architecture Section -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop" style="margin-top: 10px;">
+      <div class="section-title has-text-centered">
+        <h3 class="title is-4">Model Architecture</h3>
+      </div>
+      <div class="content has-text-centered">
+        <img src="static/images/ITH_model.png" alt="Model Architecture" style="display: inline-block; margin-top: 30px;"/>
+        <p style="font-size: 18px; margin-top: 20px; text-align: justify;">
+          Our model features a hierarchical architecture comprising three main components: the Imagination Module, which generates auditory representations; the Language Encoder, which processes textual inputs; and the Fusion Module, which integrates auditory and linguistic information.
+        </p>
+      </div>
+    </div>
   </div>
-  <p class="fs-5 text-justify mt-4">
-    Our model features a hierarchical architecture comprising three main components: the Imagination Module, which generates auditory representations; the Language Encoder, which processes textual inputs; and the Fusion Module, which integrates auditory and linguistic information.
-  </p>
 </section>
 
-<section class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
-  <h2 class="text-center">Rejection System</h2>
-  <div class="text-center mt-4">
-    <img src="static/images/ITH_rejection.png" alt="Rejection System" class="img-fluid">
+<!-- Rejection System Section -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop" style="margin-top: 10px;">
+      <div class="section-title has-text-centered">
+        <h3 class="title is-4">Rejection System</h3>
+      </div>
+      <div class="content has-text-centered">
+        <img src="static/images/ITH_rejection.png" alt="Rejection System" style="display: inline-block; margin-top: 30px;"/>
+        <p style="font-size: 18px; margin-top: 20px; text-align: justify;">
+         An iterative refinement process powered by a CLAP-based rejection system ensures high-quality auditory knowledge generation. This architecture enables retrieval-free auditory augmentation that overcomes the limitations of retrieval-based approaches.
+        </p>
+      </div>
+    </div>
   </div>
-  <p class="fs-5 text-justify mt-4">
-    An iterative refinement process powered by a CLAP-based rejection system ensures high-quality auditory knowledge generation. This architecture enables retrieval-free auditory augmentation that overcomes the limitations of retrieval-based approaches.
-  </p>
 </section>
 
-<footer class="footer">
-  <div class="container text-center">
-    <p>
-      This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-      You are free to borrow the source code of this website, we just ask that you link back to this page in the footer.
-      This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-    </p>
+
+<!-- End Model Architecture -->
+
+
+<!-- Image carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+       <div class="item">
+        <!-- Your image here -->
+<!--         <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          First image description.
+        </h2>
+      </div>
+      <div class="item"> -->
+        <!-- Your image here -->
+<!--         <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          Second image description.
+        </h2>
+      </div>
+      <div class="item"> -->
+        <!-- Your image here -->
+<!--         <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+         Third image description.
+       </h2>
+     </div>
+     <div class="item"> -->
+      <!-- Your image here -->
+<!--       <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-centered">
+        Fourth image description.
+      </h2>
+    </div>
+  </div>
+</div>
+</div>
+</section> -->
+<!-- End image carousel -->
+
+
+
+
+<!-- Youtube video -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <!-- Paper video. -->
+<!--       <h2 class="title is-3">Video Presentation</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+           -->
+<!--           <div class="publication-video"> -->
+            <!-- Youtube embed code here -->
+<!--             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Another Carousel</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+<!--             <source src="static/videos/carousel1.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <!-- Your video file here -->
+<!--             <source src="static/videos/carousel2.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">\
+            <!-- Your video file here -->
+<!--             <source src="static/videos/carousel3.mp4"
+            type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!-- <section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Poster</h2>
+
+      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+          </iframe>
+        
+      </div>
+    </div>
+  </section>
+<!--End paper poster --> 
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>TBD</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 
-</body>
-</html>
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
