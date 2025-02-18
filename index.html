@@ -45,6 +45,160 @@
   <script src="static/js/index.js"></script>
 
 </head>
+
+<style>
+  .case-study-container {
+    display: flex;
+    justify-content: center; 
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  
+  .case-study-box {
+    flex: 1;
+    max-width: 550px; 
+    min-width: 300px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .model-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .icon {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+
+  .model-name {
+    font-weight: bold;
+  }
+
+  .text-danger {
+    color: red;
+  }
+
+  .text-success {
+    color: green;
+  }
+  
+
+  .audio-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .audio-icon {
+    font-size: 22px;
+    margin-left: 10px;
+    color: #007bff;
+  }
+
+    .case-study-group2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center; 
+  margin-bottom: 40px;
+}
+
+
+.case-study-box2 {
+  width: 60%;
+  max-width: 600px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .spectrogram-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+  .spectrogram-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .spectrogram-box img {
+    width: 380px; 
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+
+  .spectrogram-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+
+  .audio-container2 {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px; 
+  }
+
+  .dki-section {
+  margin-top: 100px !important; 
+}
+
+  .fusion-section {
+  margin-top: 100px !important; 
+}
+
+.fusion-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.fusion-image {
+  max-width: 100%; 
+  width: 600px;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+</style>
+  
 <body>
 
 
@@ -137,77 +291,6 @@ Assistant for Language Models</h1>
   </div>
 </section>
 
-
-
-<style>
-  /* Case Study 중앙 정렬 및 간격 조정 */
-  .case-study-container {
-    display: flex;
-    justify-content: center; /* 가운데 정렬 */
-    align-items: stretch; /* 높이 맞추기 */
-    gap: 20px; /* 박스 사이 간격 */
-    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
-    width: 100%;
-  }
-
-  /* Case Study 박스 스타일 */
-  .case-study-box {
-    flex: 1;
-    max-width: 550px; /* 박스 최대 크기 설정 */
-    min-width: 300px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* 내부 요소를 위아래로 균형 잡히게 배치 */
-  }
-
-  /* BERT, ITH, 오디오 아이콘을 한 줄로 정렬 */
-  .model-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  /* 아이콘 스타일 */
-  .icon {
-    font-size: 18px;
-    margin-left: 5px;
-  }
-
-  /* 모델 이름 스타일 */
-  .model-name {
-    font-weight: bold;
-  }
-
-  /* 텍스트 색상 */
-  .text-danger {
-    color: red;
-  }
-
-  .text-success {
-    color: green;
-  }
-  
-  /* 오디오 플레이어를 오른쪽 정렬 */
-  .audio-container {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-  }
-
-  .audio-icon {
-    font-size: 22px;
-    margin-left: 10px;
-    color: #007bff;
-  }
-</style>
-
 <div class="container pt-5 mt-5">
   <h2 class="title is-4 has-text-centered">ITH Case Study</h2>
 
@@ -256,98 +339,6 @@ Assistant for Language Models</h1>
   </div>
 </div>
 
-
-
-<style>
-  .case-study-group2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  text-align: center; 
-  margin-bottom: 40px;
-}
-
-/* 박스를 가운데 정렬 */
-.case-study-box2 {
-  width: 60%;
-  max-width: 600px;
-  border-radius: 15px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-  /* Spectrogram 컨테이너 */
-  .spectrogram-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-
-  .spectrogram-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  /* 스펙토그램 이미지 크기 증가 */
-  .spectrogram-box img {
-    width: 380px; /* 기존보다 더 크게 */
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-
-  /* 캡션 크기 증가 */
-  .spectrogram-label {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  /* 오디오 명확히 분리 */
-  .audio-container2 {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 8px;
-    border-radius: 5px;
-    margin-bottom: 10px; /* 오디오와 스펙토그램 분리 */
-  }
-
-  .dki-section {
-  margin-top: 100px !important; /* 강제로 큰 여백 추가 */
-}
-
-  .fusion-section {
-  margin-top: 100px !important; /* 위쪽 간격 추가 */
-}
-
-.fusion-image-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 중앙 정렬 */
-  text-align: center;
-  margin-top: 30px;
-}
-
-.fusion-image {
-  max-width: 100%; /* 이미지 크기 조정 */
-  width: 600px; /* 적절한 크기로 조정 */
-  height: auto;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 50px;
-}
-
-</style>
 
 
 
