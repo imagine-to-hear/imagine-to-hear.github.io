@@ -139,7 +139,7 @@ Assistant for Language Models</h1>
   
 <div class="container pt-5 mt-5 shadow p-5 mb-5 bg-white rounded">
   <h2 class="title is-4">ITH Case Study</h2>
-  <p class="mt-5"><b>Sentence: rattle is the sound a [MASK] makes.</b></p>
+  <p class="mt-5"><b>Sentence: Rattle is the sound a [MASK] makes.</b></p>
   
   <div class="table-responsive mt-4">
     <table class="table is-fullwidth is-bordered is-striped">
@@ -165,6 +165,40 @@ Assistant for Language Models</h1>
           <td class="has-text-centered">
             <audio controls controlslist="nodownload">
               <source src='static/audio/rattle_sound_0.wav' type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+  <p class="mt-5"><b>Sentence: The sound of chirping in the fall is often associated with a [MASK].</b></p>
+  <div class="table-responsive mt-4">
+    <table class="table is-fullwidth is-bordered is-striped">
+      <thead>
+        <tr>
+          <th class="has-text-centered">Method</th>
+          <th class="has-text-centered">Answer</th>
+          <th class="has-text-centered">Output</th>
+          <th class="has-text-centered">Audio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="has-text-centered"><b>BERT</b></td>
+          <td class="has-text-centered">Cricket</td>
+          <td class="has-text-danger has-text-centered">Bird</td>
+          <td class="has-text-centered">None</td>
+        </tr>
+        <tr>
+          <td class="has-text-centered"><b>ITH</b></td>
+          <td class="has-text-centered">Cricket</td>
+          <td class="has-text-success has-text-centered">Cricket</td>
+          <td class="has-text-centered">
+            <audio controls controlslist="nodownload">
+              <source src='static/audio/chirping_sound_0.wav' type="audio/wav">
               Your browser does not support the audio element.
             </audio>
           </td>
