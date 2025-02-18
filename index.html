@@ -284,7 +284,7 @@ Assistant for Language Models</h1>
     justify-content: space-between;
   }
 
-  /* BERT, ITH, 오디오 아이콘을 한 줄로 정렬 */
+  /* BERT, ITH 정렬 */
   .model-row {
     display: flex;
     align-items: center;
@@ -292,37 +292,17 @@ Assistant for Language Models</h1>
     width: 100%;
   }
 
-  /* 아이콘 스타일 */
-  .icon {
-    font-size: 18px;
-    margin-left: 5px;
-  }
-
-  /* 모델 이름 스타일 */
+  /* 텍스트 스타일 */
   .model-name {
     font-weight: bold;
   }
 
-  /* 텍스트 색상 */
   .text-danger {
     color: red;
   }
 
   .text-success {
     color: green;
-  }
-
-  /* 오디오 플레이어를 오른쪽 정렬 */
-  .audio-container {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-  }
-
-  .audio-icon {
-    font-size: 22px;
-    margin-left: 10px;
-    color: #007bff;
   }
 
   /* Spectrogram 컨테이너 */
@@ -346,7 +326,7 @@ Assistant for Language Models</h1>
     border-radius: 5px;
   }
 
-  /* 텍스트를 이미지 위로 배치 */
+  /* 스펙토그램 위에 텍스트 올리기 */
   .spectrogram-label {
     position: absolute;
     top: 10px;
@@ -358,6 +338,17 @@ Assistant for Language Models</h1>
     font-size: 16px;
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  /* 스펙토그램 위에 오디오 추가 */
+  .audio-container {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px;
+    border-radius: 5px;
   }
 </style>
 
@@ -376,12 +367,6 @@ Assistant for Language Models</h1>
 
       <div class="model-row">
         <p><span class="model-name">ITH:</span> <span class="text-success">Lower</span> <i class="fas fa-check-circle text-success"></i></p>
-        <div class="audio-container">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/guitar_vs_sax.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
       </div>
     </div>
 
@@ -389,16 +374,34 @@ Assistant for Language Models</h1>
     <div class="spectrogram-container">
       <div class="spectrogram-box">
         <div class="spectrogram-label">Sound of Guitar</div>
+        <div class="audio-container">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/guitar.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
         <img src="static/image/sound_of_guitar.png" alt="Guitar Spectrogram">
       </div>
 
       <div class="spectrogram-box">
         <div class="spectrogram-label">Sound of Sopranissimo Saxophone</div>
+        <div class="audio-container">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/sopranissimo_saxophone.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
         <img src="static/image/sound_of_sopranissimo_saxophone.png" alt="Sopranissimo Saxophone Spectrogram">
       </div>
 
       <div class="spectrogram-box">
         <div class="spectrogram-label">Sentence Spectrogram</div>
+        <div class="audio-container">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/guitar_vs_sax.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
         <img src="static/image/The_sound_of_guitar_is_[MASK]_than_the_sound_of_sopranissimo_saxophone.png" alt="Sentence Spectrogram">
       </div>
     </div>
@@ -416,12 +419,6 @@ Assistant for Language Models</h1>
 
       <div class="model-row">
         <p><span class="model-name">ITH:</span> <span class="text-success">Lower</span> <i class="fas fa-check-circle text-success"></i></p>
-        <div class="audio-container">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/trombone_vs_trombone.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
       </div>
     </div>
 
@@ -429,22 +426,40 @@ Assistant for Language Models</h1>
     <div class="spectrogram-container">
       <div class="spectrogram-box">
         <div class="spectrogram-label">Sound of Alto Trombone</div>
+        <div class="audio-container">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/alto_trombone.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
         <img src="static/image/sound_of_alto_trombone.png" alt="Alto Trombone Spectrogram">
       </div>
 
       <div class="spectrogram-box">
         <div class="spectrogram-label">Sound of Sopranino Trombone</div>
+        <div class="audio-container">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/sopranino_trombone.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
         <img src="static/image/sound_of_sopranino_trombone.png" alt="Sopranino Trombone Spectrogram">
       </div>
 
       <div class="spectrogram-box">
         <div class="spectrogram-label">Sentence Spectrogram</div>
+        <div class="audio-container">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/trombone_vs_trombone.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
         <img src="static/image/The_sound_of_alto_trombone_is_[MASK]_than_the_sound_of_sopranino_trombone.png" alt="Sentence Spectrogram">
       </div>
     </div>
   </div>
-
 </div>
+
 
 
 
