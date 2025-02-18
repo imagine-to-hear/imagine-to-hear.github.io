@@ -320,23 +320,6 @@ Assistant for Language Models</h1>
             </div>
           </div>
         </div>
-
-        <div class="case-study-box">
-          <p><b>Sentence:</b> The sound of chirping in the fall is often associated with a [MASK].</p>
-          <p><b>Answer:</b> Cricket</p>
-          <div class="model-row">
-            <p><span class="model-name">BERT:</span> <span class="text-danger">Bird</span> <i class="fas fa-times-circle text-danger"></i></p>
-          </div>
-          <div class="model-row">
-            <p><span class="model-name">ITH:</span> <span class="text-success">Cricket</span> <i class="fas fa-check-circle text-success"></i></p>
-            <div class="audio-container">
-              <audio controls controlslist="nodownload">
-                <source src="static/audio/chirping_sound_0.wav" type="audio/wav">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -378,6 +361,17 @@ Assistant for Language Models</h1>
             </audio>
           </div>
           <img src="static/image/sound_of_sopranissimo_saxophone.png" alt="Sopranissimo Saxophone Spectrogram">
+        </div>
+
+        <div class="spectrogram-box">
+          <div class="spectrogram-label">Sentence</div>
+          <div class="audio-container2">
+            <audio controls controlslist="nodownload">
+              <source src="static/audio/The_sound_of_guitar_is_[MASK]_than_the_sound_of_sopranissimo_saxophone_0.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <img src="static/image/The_sound_of_guitar_is_[MASK]_than_the_sound_of_sopranissimo_saxophone.png" alt="Sentence Spectrogram">
         </div>
       </div>
     </div>
@@ -421,6 +415,17 @@ Assistant for Language Models</h1>
           </div>
           <img src="static/image/sound_of_sopranino_trombone.png" alt="Sopranino Trombone Spectrogram">
         </div>
+
+        <div class="spectrogram-box">
+          <div class="spectrogram-label">Sentence</div>
+          <div class="audio-container2">
+            <audio controls controlslist="nodownload">
+              <source src="static/audio/The_sound_of_alto_trombone_is_[MASK]_than_the_sound_of_sopranino_trombone_0.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <img src="static/image/The_sound_of_alto_trombone_is_[MASK]_than_the_sound_of_sopranino_trombone.png" alt="Sentence Spectrogram">
+        </div>
       </div>
     </div>
 
@@ -441,13 +446,14 @@ Assistant for Language Models</h1>
     bulmaCarousel.attach('#case-study-carousel', {
       slidesToScroll: 1,
       slidesToShow: 1,
-      infinite: true,
+      infinite: false, // 페이지 넘기기 전 다음 페이지가 보이지 않도록 설정
       autoplay: false,
       pagination: false,
       navigation: true
     });
   });
 </script>
+
 
 
 
