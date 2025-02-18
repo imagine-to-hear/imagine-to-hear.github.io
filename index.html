@@ -283,189 +283,118 @@ Assistant for Language Models</h1>
   <div class="container">
     <div class="hero-body">
       <div class="container is-max-desktop" style="margin-top:30px;">
-        <div class="section-title has-text-centered">
-          <h2 class="title is-3">Case Study</h2>
-        </div>
-        <div class="content has-text-left" style="margin-top: 20px; font-size: 18px;">
-          <p><strong>We present three case studies demonstrating the effectiveness of our proposed approach:</strong></p>
-          <p><strong>1) <i>Imagine to Hear (ITH) Case Study</i></strong> illustrates how generative auditory knowledge enhances language models in sound-related tasks, enabling more accurate auditory reasoning.</p>
-          <p><strong>2) <i>Dynamic Knowledge Injection (DKI) Case Study</i></strong> highlights the impact of targeted audio span injection, showing how selective auditory knowledge improves model predictions.</p>
-          <p><strong>3) <i>Fusion Gate (FG) Case Study</i></strong> visualizes the influence of auditory knowledge integration by examining token-wise fusion gate weights, where higher values indicate stronger audio knowledge incorporation.</p>
+        <div class="section-title">
+          <h2 class="title is-3 has-text-centered">Case Study</h2>
+          <p class="case-caption has-text-left">
+            1) <b>ITH Case Study</b> illustrates how generative auditory knowledge enhances language models in sound-related tasks, enabling more accurate auditory reasoning.<br>
+            2) <b>Dynamic Knowledge Injection (DKI) Case Study</b> highlights the impact of targeted audio span injection, showing how selective auditory knowledge improves model predictions.<br>
+            3) <b>Fusion Gate Case Study</b> visualizes the influence of auditory knowledge integration by examining token-wise fusion gate weights, where higher values indicate stronger audio knowledge incorporation.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Case Study Carousel -->
+<div class="container is-max-desktop">
+  <div id="case-study-carousel" class="carousel">
 
-<div class="container pt-5 mt-5">
-  <h2 class="title is-4 has-text-centered">ITH Case Study</h2>
+    <!-- Slide 1: ITH Case Study -->
+    <div class="item">
+      <h3 class="title is-4 has-text-centered">ITH Case Study</h3>
+      <div class="case-study-container">
+        <div class="case-study-box">
+          <p><b>Sentence:</b> Rattle is the sound a [MASK] makes.</p>
+          <p><b>Answer:</b> Snake</p>
+          <div class="model-row">
+            <p><span class="model-name">BERT:</span> <span class="text-danger">Dog</span> <i class="fas fa-times-circle text-danger"></i></p>
+          </div>
+          <div class="model-row">
+            <p><span class="model-name">ITH:</span> <span class="text-success">Snake</span> <i class="fas fa-check-circle text-success"></i></p>
+            <div class="audio-container">
+              <audio controls controlslist="nodownload">
+                <source src="static/audio/rattle_sound_0.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
 
-  <div class="case-study-container">
-    
-   
-    <div class="case-study-box">
-      <p><b>Sentence:</b> Rattle is the sound a [MASK] makes.</p>
-      <p><b>Answer:</b> Snake</p>
-
-      <div class="model-row">
-        <p><span class="model-name">BERT:</span> <span class="text-danger">Dog</span> <i class="fas fa-times-circle text-danger"></i></p>
-      </div>
-
-      <div class="model-row">
-        <p><span class="model-name">ITH:</span> <span class="text-success">Snake</span> <i class="fas fa-check-circle text-success"></i></p>
-        <div class="audio-container">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/rattle_sound_0.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
+        <div class="case-study-box">
+          <p><b>Sentence:</b> The sound of chirping in the fall is often associated with a [MASK].</p>
+          <p><b>Answer:</b> Cricket</p>
+          <div class="model-row">
+            <p><span class="model-name">BERT:</span> <span class="text-danger">Bird</span> <i class="fas fa-times-circle text-danger"></i></p>
+          </div>
+          <div class="model-row">
+            <p><span class="model-name">ITH:</span> <span class="text-success">Cricket</span> <i class="fas fa-check-circle text-success"></i></p>
+            <div class="audio-container">
+              <audio controls controlslist="nodownload">
+                <source src="static/audio/chirping_sound_0.wav" type="audio/wav">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
- 
-    <div class="case-study-box">
-      <p><b>Sentence:</b> The sound of chirping in the fall is often associated with a [MASK].</p>
-      <p><b>Answer:</b> Cricket</p>
-
-      <div class="model-row">
-        <p><span class="model-name">BERT:</span> <span class="text-danger">Bird</span> <i class="fas fa-times-circle text-danger"></i></p>
-      </div>
-
-      <div class="model-row">
-        <p><span class="model-name">ITH:</span> <span class="text-success">Cricket</span> <i class="fas fa-check-circle text-success"></i></p>
-        <div class="audio-container">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/chirping_sound_0.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
+    <!-- Slide 2: DKI Case Study (Part 1) -->
+    <div class="item">
+      <h3 class="title is-4 has-text-centered">DKI Case Study - Part 1</h3>
+      <div class="case-study-box2">
+        <p><b>Sentence:</b> The <b>sound of guitar</b> is [MASK] than the <b>sound of sopranissimo saxophone</b>.</p>
+        <p><b>Answer:</b> Lower</p>
+        <div class="model-row">
+          <p><span class="model-name">w/o DKI:</span> <span class="text-danger">Higher</span> <i class="fas fa-times-circle text-danger"></i></p>
         </div>
+        <div class="model-row">
+          <p><span class="model-name">ITH:</span> <span class="text-success">Lower</span> <i class="fas fa-check-circle text-success"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: DKI Case Study (Part 2) -->
+    <div class="item">
+      <h3 class="title is-4 has-text-centered">DKI Case Study - Part 2</h3>
+      <div class="case-study-box2">
+        <p><b>Sentence:</b> The <b>sound of alto trombone</b> is [MASK] than the <b>sound of sopranino trombone</b>.</p>
+        <p><b>Answer:</b> Lower</p>
+        <div class="model-row">
+          <p><span class="model-name">w/o DKI:</span> <span class="text-danger">Higher</span> <i class="fas fa-times-circle text-danger"></i></p>
+        </div>
+        <div class="model-row">
+          <p><span class="model-name">ITH:</span> <span class="text-success">Lower</span> <i class="fas fa-check-circle text-success"></i></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4: Fusion Gate Case Study -->
+    <div class="item">
+      <h3 class="title is-4 has-text-centered">Fusion Gate Case Study</h3>
+      <div class="fusion-image-container">
+        <img src="static/image/fusion_gate.png" alt="Fusion Gate Case Study" class="fusion-image">
       </div>
     </div>
 
   </div>
 </div>
 
+<!-- Bulma Carousel Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    bulmaCarousel.attach('#case-study-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: false,
+      pagination: false,
+      navigation: true
+    });
+  });
+</script>
 
-
-
-<div class="container dki-section">
-  <h2 class="title is-4 has-text-centered">DKI Case Study</h2>
-
-  <!-- Case 1 -->
-  <div class="case-study-group2">
-    <div class="case-study-box2">
-      <p><b>Sentence:</b> The <b>sound of guitar</b> is [MASK] than the <b>sound of sopranissimo saxophone</b>.</p>
-      <p><b>Answer:</b> Lower</p>
-
-      <div class="model-row">
-        <p><span class="model-name">w/o DKI:</span> <span class="text-danger">Higher</span> <i class="fas fa-times-circle text-danger"></i></p>
-      </div>
-
-      <div class="model-row">
-        <p><span class="model-name">ITH:</span> <span class="text-success">Lower</span> <i class="fas fa-check-circle text-success"></i></p>
-      </div>
-    </div>
-
-    <!-- Case 1 Spectrograms -->
-    <div class="spectrogram-container">
-      <div class="spectrogram-box">
-        <div class="spectrogram-label">Sound of Guitar</div>
-        <div class="audio-container2">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/sound_of_guitar_sound_0.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <img src="static/image/sound_of_guitar.png" alt="Guitar Spectrogram">
-      </div>
-
-      <div class="spectrogram-box">
-        <div class="spectrogram-label">Sound of Sopranissimo Saxophone</div>
-        <div class="audio-container2">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/sound_of_sopranissimo_saxophone_sound_0.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <img src="static/image/sound_of_sopranissimo_saxophone.png" alt="Sopranissimo Saxophone Spectrogram">
-      </div>
-
-      <div class="spectrogram-box">
-        <div class="spectrogram-label">Sentence</div>
-        <div class="audio-container2">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/The_sound_of_guitar_is_[MASK]_than_the_sound_of_sopranissimo_saxophone_0.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <img src="static/image/The_sound_of_guitar_is_[MASK]_than_the_sound_of_sopranissimo_saxophone.png" alt="Sentence Spectrogram">
-      </div>
-    </div>
-  </div>
-
-  <!-- Case 2 -->
-  <div class="case-study-group2">
-    <div class="case-study-box2">
-      <p><b>Sentence:</b> The <b>sound of alto trombone</b> is [MASK] than the <b>sound of sopranino trombone</b>.</p>
-      <p><b>Answer:</b> Lower</p>
-
-      <div class="model-row">
-        <p><span class="model-name">w/o DKI:</span> <span class="text-danger">Higher</span> <i class="fas fa-times-circle text-danger"></i></p>
-      </div>
-
-      <div class="model-row">
-        <p><span class="model-name">ITH:</span> <span class="text-success">Lower</span> <i class="fas fa-check-circle text-success"></i></p>
-      </div>
-    </div>
-
-    <!-- Case 2 Spectrograms -->
-    <div class="spectrogram-container">
-      <div class="spectrogram-box">
-        <div class="spectrogram-label">Sound of Alto Trombone</div>
-        <div class="audio-container2">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/sound_of_alto_trombone_sound_0.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <img src="static/image/sound_of_alto_trombone.png" alt="Alto Trombone Spectrogram">
-      </div>
-
-      <div class="spectrogram-box">
-        <div class="spectrogram-label">Sound of Sopranino Trombone</div>
-        <div class="audio-container2">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/sound_of_sopranino_trombone_sound_0.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <img src="static/image/sound_of_sopranino_trombone.png" alt="Sopranino Trombone Spectrogram">
-      </div>
-
-      <div class="spectrogram-box">
-        <div class="spectrogram-label">Sentence</div>
-        <div class="audio-container2">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/The_sound_of_alto_trombone_is_[MASK]_than_the_sound_of_sopranino_trombone_0.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-        <img src="static/image/The_sound_of_alto_trombone_is_[MASK]_than_the_sound_of_sopranino_trombone..png" alt="Sentence Spectrogram">
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- Fusion Gate Case Study -->
-<div class="container pt-5 mt-5 fusion-section">
-  <h2 class="title is-4 has-text-centered">FG Case Study</h2>
-
-  <div class="fusion-image-container">
-    <img src="static/image/fusion_gate.png" alt="Fusion Gate Case Study" class="fusion-image">
-  </div>
-</div>
 
 
   
