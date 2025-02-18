@@ -138,7 +138,7 @@ Assistant for Language Models</h1>
 </section>
 
 
-<style>
+<!-- <style>
   td {
     vertical-align: middle !important;
   }
@@ -224,18 +224,28 @@ Assistant for Language Models</h1>
     </table>
   </div>
 </div>
-
+ -->
 
 <style>
-  /* 박스 스타일 (둥근 테두리 & 그림자) */
+  /* Case Study 박스 스타일 */
+  .case-study-container {
+    display: flex;
+    justify-content: space-evenly; /* 두 박스를 가로로 균등 정렬 */
+    align-items: stretch; /* 박스 높이 맞추기 */
+    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
+    width: 100%;
+  }
+
   .case-study-box {
+    flex: 1; /* 박스 크기 동일하게 설정 */
+    max-width: 600px; /* 너무 커지는 것 방지 */
+    min-width: 300px; /* 박스 최소 크기 지정 */
     border-radius: 15px;
     border: 1px solid #ccc;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 100%;
-    max-width: 400px;
+    background: white;
   }
 
   /* 아이콘 스타일 */
@@ -244,7 +254,7 @@ Assistant for Language Models</h1>
     margin-left: 5px;
   }
 
-  /* 모델 이름을 굵게 */
+  /* 모델 이름 강조 */
   .model-name {
     font-weight: bold;
   }
@@ -257,50 +267,58 @@ Assistant for Language Models</h1>
   .text-success {
     color: green;
   }
+  
+  /* 오디오 플레이어 가로 길이 맞추기 */
+  .audio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  audio {
+    width: 90%;
+  }
 </style>
 
 <div class="container pt-5 mt-5">
   <h2 class="title is-4">ITH Case Study</h2>
 
-  <!-- 가로 정렬 -->
-  <div class="columns is-centered">
+  <div class="case-study-container">
     
     <!-- 첫 번째 Case -->
-    <div class="column is-narrow">
-      <div class="case-study-box">
-        <p><b>Sentence:</b> Rattle is the sound a [MASK] makes.</p>
-        <p><b>Answer:</b> Snake</p>
-        <p><span class="model-name">BERT:</span> <span class="text-danger">Dog</span> <i class="fas fa-times-circle text-danger"></i></p>
-        <p><span class="model-name">ITH:</span> <span class="text-success">Snake</span> <i class="fas fa-check-circle text-success"></i></p>
-        <p class="has-text-centered">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/rattle_sound_0.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-          <i class="fas fa-volume-up"></i>
-        </p>
+    <div class="case-study-box">
+      <p><b>Sentence:</b> Rattle is the sound a [MASK] makes.</p>
+      <p><b>Answer:</b> Snake</p>
+      <p><span class="model-name">BERT:</span> <span class="text-danger">Dog</span> <i class="fas fa-times-circle text-danger"></i></p>
+      <p><span class="model-name">ITH:</span> <span class="text-success">Snake</span> <i class="fas fa-check-circle text-success"></i></p>
+      <div class="audio-container">
+        <audio controls controlslist="nodownload">
+          <source src="static/audio/rattle_sound_0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        <i class="fas fa-volume-up"></i>
       </div>
     </div>
 
     <!-- 두 번째 Case -->
-    <div class="column is-narrow">
-      <div class="case-study-box">
-        <p><b>Sentence:</b> The sound of chirping in the fall is often associated with a [MASK].</p>
-        <p><b>Answer:</b> Cricket</p>
-        <p><span class="model-name">BERT:</span> <span class="text-danger">Bird</span> <i class="fas fa-times-circle text-danger"></i></p>
-        <p><span class="model-name">ITH:</span> <span class="text-success">Cricket</span> <i class="fas fa-check-circle text-success"></i></p>
-        <p class="has-text-centered">
-          <audio controls controlslist="nodownload">
-            <source src="static/audio/chirping_sound_0.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-          <i class="fas fa-volume-up"></i>
-        </p>
+    <div class="case-study-box">
+      <p><b>Sentence:</b> The sound of chirping in the fall is often associated with a [MASK].</p>
+      <p><b>Answer:</b> Cricket</p>
+      <p><span class="model-name">BERT:</span> <span class="text-danger">Bird</span> <i class="fas fa-times-circle text-danger"></i></p>
+      <p><span class="model-name">ITH:</span> <span class="text-success">Cricket</span> <i class="fas fa-check-circle text-success"></i></p>
+      <div class="audio-container">
+        <audio controls controlslist="nodownload">
+          <source src="static/audio/chirping_sound_0.wav" type="audio/wav">
+          Your browser does not support the audio element.
+        </audio>
+        <i class="fas fa-volume-up"></i>
       </div>
     </div>
 
   </div>
 </div>
+
+  
 
       
 <!-- Paper abstract -->
