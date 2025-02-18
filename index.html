@@ -227,25 +227,35 @@ Assistant for Language Models</h1>
  -->
 
 <style>
-  /* Case Study 박스 스타일 */
+  /* Case Study 중앙 정렬 */
   .case-study-container {
     display: flex;
-    justify-content: space-evenly; /* 두 박스를 가로로 균등 정렬 */
-    align-items: stretch; /* 박스 높이 맞추기 */
-    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    align-items: stretch; /* 높이 동일하게 맞춤 */
+    flex-wrap: wrap; /* 반응형 (화면 작아지면 줄 바꿈) */
     width: 100%;
   }
 
+  /* Case Study 박스 스타일 */
   .case-study-box {
-    flex: 1; /* 박스 크기 동일하게 설정 */
-    max-width: 600px; /* 너무 커지는 것 방지 */
-    min-width: 300px; /* 박스 최소 크기 지정 */
+    flex: 1;
+    max-width: 550px; /* 박스 최대 크기 설정 */
+    min-width: 300px;
     border-radius: 15px;
     border: 1px solid #ccc;
     padding: 20px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     background: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* BERT, ITH, 오디오 아이콘을 한 줄로 정렬 */
+  .model-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   /* 아이콘 스타일 */
@@ -254,7 +264,7 @@ Assistant for Language Models</h1>
     margin-left: 5px;
   }
 
-  /* 모델 이름 강조 */
+  /* 모델 이름 스타일 */
   .model-name {
     font-weight: bold;
   }
@@ -268,20 +278,22 @@ Assistant for Language Models</h1>
     color: green;
   }
   
-  /* 오디오 플레이어 가로 길이 맞추기 */
+  /* 오디오 플레이어를 오른쪽 정렬 */
   .audio-container {
     display: flex;
-/*     align-items: center; */
-/*     justify-content: center; */
+    align-items: center;
+    margin-left: auto; /* 오른쪽 정렬 */
   }
 
-/*   audio {
-    width: 90%;
-  } */
+  .audio-icon {
+    font-size: 22px;
+    margin-left: 10px;
+    color: #007bff;
+  }
 </style>
 
 <div class="container pt-5 mt-5">
-  <h2 class="title is-4">ITH Case Study</h2>
+  <h2 class="title is-4 has-text-centered">ITH Case Study</h2>
 
   <div class="case-study-container">
     
@@ -289,14 +301,20 @@ Assistant for Language Models</h1>
     <div class="case-study-box">
       <p><b>Sentence:</b> Rattle is the sound a [MASK] makes.</p>
       <p><b>Answer:</b> Snake</p>
-      <p><span class="model-name">BERT:</span> <span class="text-danger">Dog</span> <i class="fas fa-times-circle text-danger"></i></p>
-      <p><span class="model-name">ITH:</span> <span class="text-success">Snake</span> <i class="fas fa-check-circle text-success"></i></p>
-      <div class="audio-container">
-        <audio controls controlslist="nodownload">
-          <source src="static/audio/rattle_sound_0.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-<!--         <i class="fas fa-volume-up"></i> -->
+
+      <div class="model-row">
+        <p><span class="model-name">BERT:</span> <span class="text-danger">Dog</span> <i class="fas fa-times-circle text-danger"></i></p>
+        <div class="audio-container">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/rattle_sound_0.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+          <i class="fas fa-volume-up audio-icon"></i>
+        </div>
+      </div>
+
+      <div class="model-row">
+        <p><span class="model-name">ITH:</span> <span class="text-success">Snake</span> <i class="fas fa-check-circle text-success"></i></p>
       </div>
     </div>
 
@@ -304,19 +322,26 @@ Assistant for Language Models</h1>
     <div class="case-study-box">
       <p><b>Sentence:</b> The sound of chirping in the fall is often associated with a [MASK].</p>
       <p><b>Answer:</b> Cricket</p>
-      <p><span class="model-name">BERT:</span> <span class="text-danger">Bird</span> <i class="fas fa-times-circle text-danger"></i></p>
-      <p><span class="model-name">ITH:</span> <span class="text-success">Cricket</span> <i class="fas fa-check-circle text-success"></i></p>
-      <div class="audio-container">
-        <audio controls controlslist="nodownload">
-          <source src="static/audio/chirping_sound_0.wav" type="audio/wav">
-          Your browser does not support the audio element.
-        </audio>
-<!--         <i class="fas fa-volume-up"></i> -->
+
+      <div class="model-row">
+        <p><span class="model-name">BERT:</span> <span class="text-danger">Bird</span> <i class="fas fa-times-circle text-danger"></i></p>
+        <div class="audio-container">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/chirping_sound_0.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+          <i class="fas fa-volume-up audio-icon"></i>
+        </div>
+      </div>
+
+      <div class="model-row">
+        <p><span class="model-name">ITH:</span> <span class="text-success">Cricket</span> <i class="fas fa-check-circle text-success"></i></p>
       </div>
     </div>
 
   </div>
 </div>
+
 
   
 
