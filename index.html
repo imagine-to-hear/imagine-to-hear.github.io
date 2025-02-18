@@ -262,17 +262,17 @@ Assistant for Language Models</h1>
   /* Case Study 중앙 정렬 및 간격 조정 */
   .case-study-container {
     display: flex;
-    justify-content: center; /* 가운데 정렬 */
-    align-items: stretch; /* 높이 맞추기 */
-    gap: 20px; /* 박스 사이 간격 */
-    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
     width: 100%;
   }
 
   /* Case Study 박스 스타일 */
   .case-study-box {
     flex: 1;
-    max-width: 550px; /* 박스 최대 크기 설정 */
+    max-width: 550px;
     min-width: 300px;
     border-radius: 15px;
     border: 1px solid #ccc;
@@ -282,7 +282,7 @@ Assistant for Language Models</h1>
     background: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 내부 요소를 위아래로 균형 잡히게 배치 */
+    justify-content: space-between;
   }
 
   /* BERT, ITH, 오디오 아이콘을 한 줄로 정렬 */
@@ -335,6 +335,7 @@ Assistant for Language Models</h1>
   }
 
   .spectrogram-box {
+    position: relative;
     text-align: center;
   }
 
@@ -345,18 +346,35 @@ Assistant for Language Models</h1>
     border-radius: 5px;
   }
 
+  /* 이미지 위에 텍스트 올리기 */
   .spectrogram-label {
-    margin-top: 5px;
-    font-weight: bold;
-    background: #f8f8f8;
-    padding: 5px;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
     border-radius: 5px;
-    display: inline-block;
+    font-weight: bold;
+  }
+
+  /* Sentence Spectrogram 전체 추가 */
+  .sentence-spectrogram {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .sentence-spectrogram img {
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
   }
 </style>
 
 <div class="container pt-5 mt-5">
-  <h2 class="title is-4 has-text-centered">Dynamic Knowledge Injection Case Study</h2>
+  <h2 class="title is-4 has-text-centered">Dynamic Knowledge Injection (DKI) Case Study</h2>
 
   <div class="case-study-container">
     
@@ -426,7 +444,14 @@ Assistant for Language Models</h1>
     </div>
 
   </div>
+
+  <!-- Sentence Spectrogram -->
+  <div class="sentence-spectrogram">
+    <img src="static/image/sentence_spectrogram.png" alt="Sentence Spectrogram">
+  </div>
+
 </div>
+
 
 
   
