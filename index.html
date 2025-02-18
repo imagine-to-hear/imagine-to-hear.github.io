@@ -259,96 +259,43 @@ Assistant for Language Models</h1>
 
 
 <style>
-  /* Case Study 전체 정렬 */
-  .case-study-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    margin-bottom: 40px;
-  }
-
-  /* Case Study 박스 스타일 */
-  .case-study-box {
-    width: 60%;
-    max-width: 600px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  /* BERT, ITH 정렬 */
-  .model-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  /* 텍스트 스타일 */
-  .model-name {
-    font-weight: bold;
-  }
-
-  .text-danger {
-    color: red;
-  }
-
-  .text-success {
-    color: green;
-  }
-
   /* Spectrogram 컨테이너 */
   .spectrogram-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     flex-wrap: wrap;
     margin-top: 20px;
   }
 
   .spectrogram-box {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
+  /* 스펙토그램 이미지 크기 증가 */
   .spectrogram-box img {
-    width: 320px;
+    width: 380px; /* 기존보다 더 크게 */
     height: auto;
     border: 1px solid #ddd;
     border-radius: 5px;
   }
 
-  /* 스펙토그램 위에 텍스트 올리기 */
+  /* 캡션 크기 증가 */
   .spectrogram-label {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.85);
-    padding: 6px 12px;
-    border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
   }
 
-  /* 스펙토그램 위에 오디오 추가 */
+  /* 오디오 명확히 분리 */
   .audio-container2 {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.9);
-    padding: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px;
     border-radius: 5px;
+    margin-bottom: 10px; /* 오디오와 스펙토그램 분리 */
   }
 </style>
 
@@ -454,7 +401,7 @@ Assistant for Language Models</h1>
             Your browser does not support the audio element.
           </audio>
         </div>
-        <img src="static/image/The_sound_of_alto_trombone_is_[MASK]_than_the_sound_of_sopranino_trombone..png" alt="Sentence Spectrogram">
+        <img src="static/image/The_sound_of_alto_trombone_is_[MASK]_than_the_sound_of_sopranino_trombone.png" alt="Sentence Spectrogram">
       </div>
     </div>
   </div>
