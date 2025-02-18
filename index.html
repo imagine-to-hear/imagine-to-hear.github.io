@@ -140,12 +140,13 @@ Assistant for Language Models</h1>
 
 
 <style>
-  /* Case Study 중앙 정렬 */
+  /* Case Study 중앙 정렬 및 간격 조정 */
   .case-study-container {
     display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: stretch; /* 높이 동일하게 맞춤 */
-    flex-wrap: wrap; /* 반응형 (화면 작아지면 줄 바꿈) */
+    justify-content: center; /* 가운데 정렬 */
+    align-items: stretch; /* 높이 맞추기 */
+    gap: 20px; /* 박스 사이 간격 */
+    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
     width: 100%;
   }
 
@@ -162,6 +163,7 @@ Assistant for Language Models</h1>
     background: white;
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* 내부 요소를 위아래로 균형 잡히게 배치 */
   }
 
   /* BERT, ITH, 오디오 아이콘을 한 줄로 정렬 */
@@ -169,6 +171,7 @@ Assistant for Language Models</h1>
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 
   /* 아이콘 스타일 */
@@ -195,7 +198,7 @@ Assistant for Language Models</h1>
   .audio-container {
     display: flex;
     align-items: center;
-    margin-left: auto; /* 오른쪽 정렬 */
+    margin-left: auto;
   }
 
   .audio-icon {
@@ -222,7 +225,6 @@ Assistant for Language Models</h1>
       <div class="model-row">
         <p><span class="model-name">ITH:</span> <span class="text-success">Snake</span> <i class="fas fa-check-circle text-success"></i></p>
         <div class="audio-container">
-          <i class="fas fa-volume-up audio-icon"></i>
           <audio controls controlslist="nodownload">
             <source src="static/audio/rattle_sound_0.wav" type="audio/wav">
             Your browser does not support the audio element.
@@ -243,7 +245,6 @@ Assistant for Language Models</h1>
       <div class="model-row">
         <p><span class="model-name">ITH:</span> <span class="text-success">Cricket</span> <i class="fas fa-check-circle text-success"></i></p>
         <div class="audio-container">
-          <i class="fas fa-volume-up audio-icon"></i>
           <audio controls controlslist="nodownload">
             <source src="static/audio/chirping_sound_0.wav" type="audio/wav">
             Your browser does not support the audio element.
