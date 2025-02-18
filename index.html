@@ -223,6 +223,83 @@ Assistant for Language Models</h1>
       </tbody>
     </table>
   </div>
+
+  <style>
+  /* 박스 스타일 (둥근 테두리 & 그림자) */
+  .case-study-box {
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  /* 아이콘 스타일 */
+  .icon {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+  /* 모델 이름을 굵게 */
+  .model-name {
+    font-weight: bold;
+  }
+
+  /* 텍스트 색상 */
+  .text-danger {
+    color: red;
+  }
+
+  .text-success {
+    color: green;
+  }
+</style>
+
+<div class="container pt-5 mt-5">
+  <h2 class="title is-4">ITH Case Study</h2>
+
+  <!-- 가로 정렬 -->
+  <div class="columns is-centered">
+    
+    <!-- 첫 번째 Case -->
+    <div class="column is-narrow">
+      <div class="case-study-box">
+        <p><b>Sentence:</b> Rattle is the sound a [MASK] makes.</p>
+        <p><b>Answer:</b> Snake</p>
+        <p><span class="model-name">BERT:</span> <span class="text-danger">Dog</span> <i class="fas fa-times-circle text-danger"></i></p>
+        <p><span class="model-name">ITH:</span> <span class="text-success">Snake</span> <i class="fas fa-check-circle text-success"></i></p>
+        <p class="has-text-centered">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/rattle_sound_0.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+          <i class="fas fa-volume-up"></i>
+        </p>
+      </div>
+    </div>
+
+    <!-- 두 번째 Case -->
+    <div class="column is-narrow">
+      <div class="case-study-box">
+        <p><b>Sentence:</b> The sound of chirping in the fall is often associated with a [MASK].</p>
+        <p><b>Answer:</b> Cricket</p>
+        <p><span class="model-name">BERT:</span> <span class="text-danger">Bird</span> <i class="fas fa-times-circle text-danger"></i></p>
+        <p><span class="model-name">ITH:</span> <span class="text-success">Cricket</span> <i class="fas fa-check-circle text-success"></i></p>
+        <p class="has-text-centered">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/chirping_sound_0.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+          <i class="fas fa-volume-up"></i>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 </div>
 
       
