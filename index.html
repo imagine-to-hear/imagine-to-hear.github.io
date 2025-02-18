@@ -181,13 +181,8 @@ Assistant for Language Models</h1>
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p style="font-size:18px;">
-            The advancement of pretrained language models has significantly improved the state of the art in various language-related tasks.
-However, since the models have been trained on text-only corpora, they struggle with tasks requiring auditory commonsense knowledge.
-Previous work addresses this problem by augmenting the language model to retrieve knowledge from an external database containing auditory data.
-This approach has many limitations, such as the potential lack of relevant audio in databases and the high costs associated with constructing and querying the databases.
-To address these issues, we propose Imagine to Hear, a novel approach that dynamically generates auditory knowledge using generative models.
-Our framework employs a hierarchical architecture that effectively integrates auditory knowledge, incorporating a CLAP-based rejection system for quality control.
-Through experiments, we demonstrate that our method achieves state-of-the-art performance on AuditoryBench without relying on external databases, and improves performance on GLUE and CommonsenseQA benchmark, highlighting the effectiveness of our generation-based approach.
+            Language models pretrained on text-only corpora often struggle with tasks that require auditory commonsense knowledge. Previous work addresses this problem by augmenting the language model to retrieve knowledge from external audio databases. This approach has several limitations, such as the potential lack of relevant audio in databases and the high costs associated with constructing and querying the databases. To address these issues, we propose Imagine to Hear, a novel approach that dynamically generates auditory knowledge using generative models. Our framework detects multiple audio-related textual spans from the given prompt and generates corresponding auditory knowledge. We develop several mechanisms to efficiently process multiple auditory knowledge, including a CLAP-based rejection sampler and a language-audio fusion module. Our experiments show that our method achieves state-of-the-art performance on AuditoryBench without relying on external databases, highlighting the effectiveness of our generation-based approach.
+
           </p>
         </div>
       </div>
@@ -202,14 +197,15 @@ Through experiments, we demonstrate that our method achieves state-of-the-art pe
   <div class="hero-body">
     <div class="container is-max-desktop" style="margin-top: 30px;">
       <div class="section-title has-text-centered">
-        <h2 class="title is-3">Method</h2>
+<!--         <h2 class="title is-3">Method</h2> -->
+        <h2 class="title is-3">TBD</h2>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Model Architecture Section -->
-<section class="hero">
+<!-- <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop" style="margin-top: 10px;">
       <div class="section-title has-text-centered">
@@ -223,10 +219,10 @@ Through experiments, we demonstrate that our method achieves state-of-the-art pe
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Rejection System Section -->
-<section class="hero is-light">
+<!-- <section class="hero is-light">
   <div class="hero-body">
     <div class="container is-max-desktop" style="margin-top: 10px;">
       <div class="section-title has-text-centered">
@@ -240,7 +236,7 @@ Through experiments, we demonstrate that our method achieves state-of-the-art pe
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- End Model Architecture -->
