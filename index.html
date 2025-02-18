@@ -259,6 +259,29 @@ Assistant for Language Models</h1>
 
 
 <style>
+  .case-study-group2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ 가운데 정렬 */
+  width: 100%;
+  text-align: center; /* ✅ 내부 요소도 중앙 정렬 */
+  margin-bottom: 40px;
+}
+
+/* 박스를 가운데 정렬 */
+.case-study-box2 {
+  width: 60%;
+  max-width: 600px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
   /* Spectrogram 컨테이너 */
   .spectrogram-container {
     display: flex;
@@ -303,8 +326,8 @@ Assistant for Language Models</h1>
   <h2 class="title is-4 has-text-centered">Dynamic Knowledge Injection (DKI) Case Study</h2>
 
   <!-- Case 1 -->
-  <div class="case-study-group">
-    <div class="case-study-box">
+  <div class="case-study-group2">
+    <div class="case-study-box2">
       <p><b>Sentence:</b> The <b>sound of guitar</b> is [MASK] than the <b>sound of sopranissimo saxophone</b>.</p>
       <p><b>Answer:</b> Lower</p>
 
@@ -355,8 +378,8 @@ Assistant for Language Models</h1>
   </div>
 
   <!-- Case 2 -->
-  <div class="case-study-group">
-    <div class="case-study-box">
+  <div class="case-study-group2">
+    <div class="case-study-box2">
       <p><b>Sentence:</b> The <b>sound of alto trombone</b> is [MASK] than the <b>sound of sopranino trombone</b>.</p>
       <p><b>Answer:</b> Lower</p>
 
