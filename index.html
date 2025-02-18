@@ -346,16 +346,18 @@ Assistant for Language Models</h1>
     border-radius: 5px;
   }
 
-  /* 이미지 위에 텍스트 올리기 */
+  /* 이미지 위에 텍스트 완전히 올리기 */
   .spectrogram-label {
     position: absolute;
-    top: 5px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.8);
-    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 6px 12px;
     border-radius: 5px;
+    font-size: 16px;
     font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   }
 </style>
 
@@ -386,18 +388,18 @@ Assistant for Language Models</h1>
     <!-- Case 1 Spectrograms -->
     <div class="spectrogram-container">
       <div class="spectrogram-box">
-        <img src="static/image/sound_of_guitar.png" alt="Guitar Spectrogram">
         <div class="spectrogram-label">Sound of Guitar</div>
+        <img src="static/image/sound_of_guitar.png" alt="Guitar Spectrogram">
       </div>
 
       <div class="spectrogram-box">
-        <img src="static/image/sound_of_sopranissimo_saxophone.png" alt="Sopranissimo Saxophone Spectrogram">
         <div class="spectrogram-label">Sound of Sopranissimo Saxophone</div>
+        <img src="static/image/sound_of_sopranissimo_saxophone.png" alt="Sopranissimo Saxophone Spectrogram">
       </div>
 
       <div class="spectrogram-box">
-        <img src="static/image/sound_of_sentence_1.png" alt="Sentence Spectrogram">
         <div class="spectrogram-label">Sentence Spectrogram</div>
+        <img src="static/image/sound_of_sentence_1.png" alt="Sentence Spectrogram">
       </div>
     </div>
   </div>
@@ -426,18 +428,18 @@ Assistant for Language Models</h1>
     <!-- Case 2 Spectrograms -->
     <div class="spectrogram-container">
       <div class="spectrogram-box">
-        <img src="static/image/sound_of_alto_trombone.png" alt="Alto Trombone Spectrogram">
         <div class="spectrogram-label">Sound of Alto Trombone</div>
+        <img src="static/image/sound_of_alto_trombone.png" alt="Alto Trombone Spectrogram">
       </div>
 
       <div class="spectrogram-box">
-        <img src="static/image/sound_of_sopranino_trombone.png" alt="Sopranino Trombone Spectrogram">
         <div class="spectrogram-label">Sound of Sopranino Trombone</div>
+        <img src="static/image/sound_of_sopranino_trombone.png" alt="Sopranino Trombone Spectrogram">
       </div>
 
       <div class="spectrogram-box">
-        <img src="static/image/sound_of_sentence_2.png" alt="Sentence Spectrogram">
         <div class="spectrogram-label">Sentence Spectrogram</div>
+        <img src="static/image/sound_of_sentence_2.png" alt="Sentence Spectrogram">
       </div>
     </div>
   </div>
