@@ -49,18 +49,16 @@
 <style>
   .case-study-container {
     display: flex;
-    justify-content: center; 
-    align-items: stretch;
+    flex-direction: column; /* 위아래 정렬 */
+    align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
     width: 100%;
-  }
+}
 
   
-  .case-study-box {
-    flex: 1;
-    max-width: 550px; 
-    min-width: 300px;
+.case-study-box {
+    width: 60%; /* 중앙 정렬을 위해 너비 조정 */
+    max-width: 550px;
     border-radius: 15px;
     border: 1px solid #ccc;
     padding: 20px;
@@ -70,7 +68,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
+}
 
   .model-row {
     display: flex;
