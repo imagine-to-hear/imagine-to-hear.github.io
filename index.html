@@ -257,6 +257,179 @@ Assistant for Language Models</h1>
 </div>
 
 
+
+<style>
+  /* Case Study 중앙 정렬 및 간격 조정 */
+  .case-study-container {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: stretch; /* 높이 맞추기 */
+    gap: 20px; /* 박스 사이 간격 */
+    flex-wrap: wrap; /* 화면이 작아지면 줄 바꿈 */
+    width: 100%;
+  }
+
+  /* Case Study 박스 스타일 */
+  .case-study-box {
+    flex: 1;
+    max-width: 550px; /* 박스 최대 크기 설정 */
+    min-width: 300px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 내부 요소를 위아래로 균형 잡히게 배치 */
+  }
+
+  /* BERT, ITH, 오디오 아이콘을 한 줄로 정렬 */
+  .model-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* 아이콘 스타일 */
+  .icon {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+  /* 모델 이름 스타일 */
+  .model-name {
+    font-weight: bold;
+  }
+
+  /* 텍스트 색상 */
+  .text-danger {
+    color: red;
+  }
+
+  .text-success {
+    color: green;
+  }
+
+  /* 오디오 플레이어를 오른쪽 정렬 */
+  .audio-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .audio-icon {
+    font-size: 22px;
+    margin-left: 10px;
+    color: #007bff;
+  }
+
+  /* Spectrogram 컨테이너 */
+  .spectrogram-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .spectrogram-box {
+    text-align: center;
+  }
+
+  .spectrogram-box img {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .spectrogram-label {
+    margin-top: 5px;
+    font-weight: bold;
+    background: #f8f8f8;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+</style>
+
+<div class="container pt-5 mt-5">
+  <h2 class="title is-4 has-text-centered">Dynamic Knowledge Injection (DKI) Case Study</h2>
+
+  <div class="case-study-container">
+    
+    <!-- 첫 번째 DKI Case -->
+    <div class="case-study-box">
+      <p><b>Sentence:</b> The sound of guitar is [MASK] than the sound of sopranissimo saxophone.</p>
+      <p><b>Answer:</b> Lower</p>
+
+      <div class="model-row">
+        <p><span class="model-name">w/o DKI:</span> <span class="text-danger">Higher</span> <i class="fas fa-times-circle text-danger"></i></p>
+      </div>
+
+      <div class="model-row">
+        <p><span class="model-name">ITH:</span> <span class="text-success">Lower</span> <i class="fas fa-check-circle text-success"></i></p>
+        <div class="audio-container">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/guitar_vs_sax.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </div>
+
+    <!-- 두 번째 DKI Case -->
+    <div class="case-study-box">
+      <p><b>Sentence:</b> The sound of alto trombone is [MASK] than the sound of sopranino trombone.</p>
+      <p><b>Answer:</b> Lower</p>
+
+      <div class="model-row">
+        <p><span class="model-name">w/o DKI:</span> <span class="text-danger">Higher</span> <i class="fas fa-times-circle text-danger"></i></p>
+      </div>
+
+      <div class="model-row">
+        <p><span class="model-name">ITH:</span> <span class="text-success">Lower</span> <i class="fas fa-check-circle text-success"></i></p>
+        <div class="audio-container">
+          <audio controls controlslist="nodownload">
+            <source src="static/audio/trombone_vs_trombone.wav" type="audio/wav">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Spectrogram Images -->
+  <div class="spectrogram-container">
+    
+    <div class="spectrogram-box">
+      <img src="static/images/guitar_spectrogram.png" alt="Guitar Spectrogram">
+      <div class="spectrogram-label">Sound of Guitar</div>
+    </div>
+
+    <div class="spectrogram-box">
+      <img src="static/images/sopranissimo_saxophone_spectrogram.png" alt="Sopranissimo Saxophone Spectrogram">
+      <div class="spectrogram-label">Sound of Sopranissimo Saxophone</div>
+    </div>
+
+    <div class="spectrogram-box">
+      <img src="static/images/alto_trombone_spectrogram.png" alt="Alto Trombone Spectrogram">
+      <div class="spectrogram-label">Sound of Alto Trombone</div>
+    </div>
+
+    <div class="spectrogram-box">
+      <img src="static/images/sopranino_trombone_spectrogram.png" alt="Sopranino Trombone Spectrogram">
+      <div class="spectrogram-label">Sound of Sopranino Trombone</div>
+    </div>
+
+  </div>
+</div>
+
+
+  
   
 
       
