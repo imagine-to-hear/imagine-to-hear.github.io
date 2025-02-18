@@ -120,24 +120,28 @@
 }
 
 
-.case-study-box2 {
-  width: 60%;
-  max-width: 600px;
-  border-radius: 15px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  .case-study-box2 {
+    width: 60%;
+    max-width: 600px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 15px; /* 패딩 줄여서 내용 공간 줄임 */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .case-study-box2 p {
+    font-size: 16px; /* 텍스트 크기 조정 */
+  }
 
   .spectrogram-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px; /* 이미지 간 간격 줄임 */
     flex-wrap: wrap;
     margin-top: 20px;
   }
@@ -147,11 +151,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 250px; /* 이미지와 동일한 너비로 맞춤 */
   }
 
-
   .spectrogram-box img {
-    width: 250px; 
+    width: 250px; /* 이미지 크기 줄임 */
     height: auto;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -159,17 +163,24 @@
 
 
   .spectrogram-label {
-    font-size: 18px;
+    font-size: 16px; /* 글씨 크기 조정 */
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
-
   .audio-container2 {
+    width: 100%; /* 오디오 컨테이너 너비 조정 */
+    display: flex;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.95);
-    padding: 8px;
+    padding: 6px; /* 패딩 줄임 */
     border-radius: 5px;
-    margin-bottom: 10px; 
+    margin-bottom: 8px;
+  }
+
+  .audio-container2 audio {
+    width: 90%; /* 오디오 크기 줄여서 가로 맞춤 */
+    max-width: 220px; /* 최대 너비 설정 */
   }
 
   .dki-section {
