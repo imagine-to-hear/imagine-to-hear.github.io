@@ -49,6 +49,7 @@
 <style>
   .item {
     padding-bottom: 20px; 
+    max-width: 100%;
 }
   
   .case-study-container {
@@ -74,12 +75,19 @@
     justify-content: space-between;
 }
 
+.model-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Mobile layout - flex direction changes */
+@media (max-width: 768px) {
   .model-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column;
   }
+}
 
   .icon {
     font-size: 18px;
